@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row" id="carousel">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide *ngFor="let im of images; let i = index">
+        <img class="banner-img" [src]="im" alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>{{i}} - slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
+<div class="container" id="desc">
+  <div class="row">
+    <div class="col">
+      <p class="text-center">Nakey - конные амуниции, кожанные изделия, натуральная кожа, фурнитура  и многое другое</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.item-outer{
+    width: 25%;
+    padding: 8px;
+}
+@media screen and (max-width: 576px){
+    .item-outer{
+        width: 50%;
+    }
+}

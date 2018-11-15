@@ -1,0 +1,17 @@
+@import '../../shared/variables.scss';
+.item{
+    border: 1px solid #EBEFF5;
+    .img{
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .img:hover{
+        background-size: 120%;
+    }
+}
+small{
+    font-size: 0.875rem;
+}

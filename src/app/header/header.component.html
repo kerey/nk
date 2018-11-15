@@ -1,0 +1,34 @@
+<header>
+  <nav class="navbar navbar-light navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand pb-0 pt-0" routerLink="" title="" aria-label="main-logo">
+          <img src="../../assets/img/logo.svg" alt="Nakey">
+        </a>
+        <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu " aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="mainMenu" [ngbCollapse]="isCollapsed">
+          <ul class="navbar-nav mt-2 mt-lg-0 justify-content-center" style="flex: 1">
+            <li class="nav-item">
+              <a class="nav-link" (click)="isCollapsed=true" routerLink="/main" routerLinkActive="active">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="isCollapsed=true" routerLink="/shop" routerLinkActive="active">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="isCollapsed=true" routerLink="/contacts" routerLinkActive="active">Контакты</a>
+            </li>
+            
+          </ul>
+          <ul class="m-0 p-0">
+            <li class="nav-item right-item">
+              <a class="nav-link p-0" (click)="isCollapsed=true" routerLink="/cart" routerLinkActive="active">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</header>
