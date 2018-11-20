@@ -9,8 +9,11 @@
         
     }
     .img:hover{
-        background-size: 120%;
+
     }
+}
+.item:hover{
+    box-shadow: 0 1px 5px $main-blue;
 }
 small{
     font-size: 0.875rem;

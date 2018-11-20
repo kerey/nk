@@ -8,11 +8,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="mainMenu" [ngbCollapse]="isCollapsed">
-          <ul class="navbar-nav mt-2 mt-lg-0 justify-content-center" style="flex: 1">
-            <li class="nav-item">
+        <div class="collapse navbar-collapse justify-content-start" id="mainMenu" [ngbCollapse]="isCollapsed">
+          <ul class="navbar-nav mt-2 mt-lg-0 justify-content-start" style="flex: 1">
+            <!-- <li class="nav-item">
               <a class="nav-link" (click)="isCollapsed=true" routerLink="/main" routerLinkActive="active">Главная</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" (click)="isCollapsed=true" routerLink="/shop" routerLinkActive="active">Каталог</a>
             </li>
@@ -21,8 +21,11 @@
             </li>
             
           </ul>
-          <ul class="m-0 p-0">
-            <li class="nav-item right-item">
+          <ul class="m-0 p-0 d-flex">
+            <li class="nav-item right-item mr-4">
+              <input type="text" class="form-control search-input" placeholder="Поиск">
+            </li>
+            <li class="nav-item right-item d-flex align-items-center">
               <a class="nav-link p-0" (click)="isCollapsed=true" routerLink="/cart" routerLinkActive="active">
                 <i class="fas fa-shopping-cart"></i>
               </a>
