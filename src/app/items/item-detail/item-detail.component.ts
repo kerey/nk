@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import * as constants from '../../shared/constants';
+import { SharedService } from 'src/app/shared/services/shared.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -13,6 +13,8 @@ export class ItemDetailComponent implements OnInit {
   public item;
   constructor(
     private route: ActivatedRoute,
+    private sharedService: SharedService,
+    private cartService: CartService,
   ) { 
     this.route.params.subscribe(params => {
       this.item_id = params['item_id'];
@@ -24,7 +26,18 @@ export class ItemDetailComponent implements OnInit {
   ngOnInit() {
   }
   getItem(){
-    this.item = constants.items.find(it=>it.id == this.item_id);
+    this.sharedService.request('get', `core/item/${this.item_id}`, null, {}).subscribe(
+      res=>{
+        console.log(res)
+        this.item = res.data;
+      },
+      error=>{
+        console.log(error)
+      }
+    );
+  }
+  addToCart(){
+    console.log(this.cartService.addToCart(this.item));
   }
 
 }

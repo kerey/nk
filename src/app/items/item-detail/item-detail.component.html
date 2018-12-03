@@ -2,10 +2,12 @@
   <div class="row">
     <div class="col col-lg-8">
         <img class="w-100 main-img" src="{{item.image}}" alt=""/>
+        <button class="btn btn-default" (click)="addToCart()">Добавить в корзину</button>
     </div>
     <div class="col col-lg-4">
         <h4>{{item.name}}</h4>
         <h5>{{item.price}}</h5>
+
     </div>
   </div>
 </div>
