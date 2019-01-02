@@ -28,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     NgbModule,
     SharedModule,
+    BrowserModule.withServerTransition({appId: 'nk-ssr'}),
   ],
   providers: [],
   bootstrap: [AppComponent]
